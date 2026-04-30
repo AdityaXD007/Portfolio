@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, type Variants } from 'framer-motion';
 import { ArrowRight, Download } from 'lucide-react';
-import { GithubIcon as Github, LinkedinIcon as Linkedin } from './Icons';
 import { Link } from 'react-scroll';
 
 const TERMINAL_LINES = [
