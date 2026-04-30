@@ -256,9 +256,13 @@ const Hero: React.FC = () => {
                 View Projects <ArrowRight size={16} />
               </button>
             </Link>
-            <button className="bg-transparent border border-[#30363d] text-[#c9d1d9] px-6 py-3 rounded-[8px] font-medium flex items-center gap-2 hover:bg-[#161b22] transition-colors">
+            <a 
+              href="/Aditya_Karki_CV.pdf" 
+              download="Aditya_Karki_CV.pdf"
+              className="bg-transparent border border-[#30363d] text-[#c9d1d9] px-6 py-3 rounded-[8px] font-medium flex items-center gap-2 hover:bg-[#161b22] transition-colors"
+            >
               Download CV <Download size={16} />
-            </button>
+            </a>
           </motion.div>
         </motion.div>
 

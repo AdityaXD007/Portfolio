@@ -4,13 +4,27 @@ import { ExternalLink, Layers, MessageSquare, ShieldCheck, Video, GraduationCap,
 import { GithubIcon as Github } from './Icons';
 
 const projects = [
+   {
+    title: "Trek Sathi",
+    description: "A comprehensive trekking companion and guide booking platform designed for hikers and travelers in Nepal.",
+    longDescription: "Features include interactive trail maps using Leaflet, real-time weather updates for high-altitude regions, a guide/porter booking system, and community-driven trail reports.",
+    image: "assets/Treksathi.jpg",
+    tech: ["Django", "Django template", "Sqlite", "TailwindCSS"],
+    links: { github: "https://github.com/AdityaXD007/Trek-Sathi", live: "#" },
+    features: [
+        { icon: <Layers size={16} />, text: "Trail Maps" },
+        { icon: <MessageSquare size={16} />, text: "Guide Booking" },
+        { icon: <ShieldCheck size={16} />, text: "Weather Alerts" }
+    ],
+    accent: "orange"
+  },
   {
     title: "SkillSwap",
     description: "A comprehensive peer-to-peer skill exchange platform. Built with a focus on real-time communication and secure transactions.",
     longDescription: "Features include JWT-based authentication, real-time chat using WebSockets, integrated video calling for sessions using WebRTC, and a secure payment gateway integration through Khalti and Stripe.",
-    image: "public/assets/skillswap.png",
-    tech: ["Django", "React", "WebSockets", "PostgreSQL", "TailwindCSS"],
-    links: { github: "#", live: "#" },
+    image: "assets/skillswap.png",
+    tech: ["Django", "React", "WebSockets","WebRTC", "PostgreSQL", "TailwindCSS"],
+    links: { github: "https://github.com/AdityaXD007/Aditya_Karki_SkillSwap", live: "#" },
     features: [
         { icon: <MessageSquare size={16} />, text: "Real-time Chat" },
         { icon: <Video size={16} />, text: "Video Calls" },
@@ -23,33 +37,20 @@ const projects = [
     title: "Blog Haven",
     description: "A modern content management and blogging platform designed for creators. Features a sleek UI and robust backend.",
     longDescription: "Complete CRUD functionality for posts and comments, user profiles, image uploading, and search functionality with category filtering.",
-    image: "public/assets/bloghaven.png",
+    image: "assets/bloghaven.png",
     tech: ["React", "Django REST Framework", "SQLite", "Cloudinary"],
-    links: { github: "#", live: "https://blogger-s-heaven.onrender.com/" },
+    links: { github: "https://github.com/AdityaXD007", live: "https://blogger-s-heaven.onrender.com/" },
     features: [
         { icon: <Layers size={16} />, text: "Dynamic Routing" },
         { icon: <ShieldCheck size={16} />, text: "RBAC Auth" }
     ],
     accent: "emerald"
-  },
-  {
-    title: "Moodary",
-    description: "A secure C# desktop application for personal journaling and mood tracking with a focus on data privacy.",
-    longDescription: "Features AES-256 encryption for entries, biometric-like password protection, and automated cloud backup integration.",
-    image: "https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&q=80&w=800",
-    tech: ["C#", ".NET Core", "SQLite", "WinForms/WPF"],
-    links: { github: "#", live: "#" },
-    features: [
-        { icon: <ShieldCheck size={16} />, text: "AES Encryption" },
-        { icon: <Layers size={16} />, text: "Cloud Sync" }
-    ],
-    accent: "slate"
   }
 ];
 
 const Projects: React.FC = () => {
   return (
-    <section id="projects" className="py-24 px-6">
+    <section id="projects" className="py-10 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
           <div>
@@ -126,7 +127,6 @@ const Projects: React.FC = () => {
                   </div>
                 )}
                 <div className="flex items-center gap-3 mb-4">
-                    <span className={`h-[2px] w-8 bg-${project.accent}-500`} />
                     <h3 className="text-3xl font-bold text-white group-hover:text-indigo-400 transition-colors">
                         {project.title}
                     </h3>
