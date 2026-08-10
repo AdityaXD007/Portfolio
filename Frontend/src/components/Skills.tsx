@@ -4,11 +4,11 @@ import { motion } from 'framer-motion';
 const skillCategories = [
   {
     title: "Frontend",
-    skills: ["React", "TypeScript", "TailwindCSS", "Framer Motion"]
+    skills: ["React", "ReactNative", "TypeScript",]
   },
   {
     title: "Backend",
-    skills: ["Django", "Django REST Framework", "Python"]
+    skills: ["Django", "Django REST Framework", "Flutter"]
   },
   {
     title: "Database",
@@ -16,7 +16,7 @@ const skillCategories = [
   },
   {
     title: "Tools & DevOps",
-    skills: ["Git", "Docker", "Postman","Linux", "AWS (Basic)"]
+    skills: ["Git", "Docker", "Postman","Linux", "AWS (Basic)", "Firebase"]
   }
 ];
 

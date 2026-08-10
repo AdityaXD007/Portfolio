@@ -23,8 +23,8 @@ const timelineData = [
     type: 'education',
     title: 'Bachelor in Information Technology (BIT)',
     organization: 'Informatics College Pokhara',
-    date: 'Present',
-    description: 'Currently pursuing a degree focused on Software Engineering, Web Development, Database and System Design. Actively working on real-world projects and full-stack applications.',
+    date: 'Completed',
+    description: 'Completed a Bachelor’s degree in Information Technology with a focus on software engineering, web and mobile development, databases, and system design. Developed practical skills through academic projects and real-world application development.',
     skills: ['SOFTWARE ENGINEERING', 'FULL STACK', 'PROJECT DEVELOPMENT']
   },
   {
@@ -37,11 +37,11 @@ const timelineData = [
   },
   {
     type: 'experience',
-    title: 'SEO Intern',
-    organization: 'Fishtail Infosolutions',
-    date: 'Completed',
-    description: 'Focused on Search Engine Optimization, keyword research, and improving website visibility. Worked on on-page SEO, analytics, and content optimization strategies.',
-    skills: ['SEO', 'DIGITAL MARKETING', 'ANALYTICS', 'CONTENT OPTIMIZATION']
+    title: 'Full Stack Developer',
+    organization: 'Everest Technologies',
+    date: 'Working',
+    description: 'Worked on developing full-stack web and mobile applications using Django, React, Flutter, and React Native. Gained hands-on experience in REST APIs, authentication, database integration, UI development, and real-world application workflows.',
+    skills: ['DJANGO', 'REACT', 'NextJS', 'FLUTTER', 'REACT NATIVE', 'REST API']
   }
 ];
 
@@ -68,7 +68,7 @@ const Experience: React.FC = () => {
     <section id="experience" className="py-10 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -76,7 +76,7 @@ const Experience: React.FC = () => {
           >
             Journey & <span className="text-emerald-500">Milestones</span>
           </motion.h2>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -89,7 +89,7 @@ const Experience: React.FC = () => {
 
         <div className="relative group">
           {/* Horizontal Scroll Container */}
-          <div 
+          <div
             ref={scrollRef}
             className="overflow-x-auto pb-[50px] pt-[50px] px-4 no-scrollbar"
           >
@@ -108,18 +108,16 @@ const Experience: React.FC = () => {
                 >
                   {/* Timeline Dot (Middle) */}
                   <div className="hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-indigo-500 shadow-[0_0_15px_rgba(99,102,241,0.6)] z-10 border-4 border-background" />
-                  
+
                   {/* Connector Line (Desktop) */}
-                  <div className={`absolute left-1/2 -translate-x-1/2 w-[2px] bg-indigo-500/20 hidden md:block ${
-                    index % 2 === 0 ? 'top-0 bottom-1/2' : 'top-1/2 bottom-0'
-                  }`} />
+                  <div className={`absolute left-1/2 -translate-x-1/2 w-[2px] bg-indigo-500/20 hidden md:block ${index % 2 === 0 ? 'top-0 bottom-1/2' : 'top-1/2 bottom-0'
+                    }`} />
 
                   {/* Content Card - Pushed up or down */}
-                  <div className={`w-full ${
-                    index % 2 === 0 
-                      ? 'md:mb-[400px]' // Pushed UP
-                      : 'md:mt-[400px]' // Pushed DOWN
-                  }`}>
+                  <div className={`w-full ${index % 2 === 0
+                    ? 'md:mb-[400px]' // Pushed UP
+                    : 'md:mt-[400px]' // Pushed DOWN
+                    }`}>
                     <div className="glass-card p-6 rounded-3xl border border-white/5 hover:border-indigo-500/30 transition-all relative group h-full">
                       <div className="flex items-center gap-3 mb-4">
                         <div className="p-2 bg-indigo-500/10 rounded-lg text-indigo-500">
@@ -158,7 +156,7 @@ const Experience: React.FC = () => {
 
                   {/* Mobile Dot */}
                   <div className="md:hidden absolute -left-2 top-0 bottom-0 w-[2px] bg-indigo-500/10">
-                      <div className="absolute top-8 -left-[5px] w-3 h-3 rounded-full bg-indigo-500" />
+                    <div className="absolute top-8 -left-[5px] w-3 h-3 rounded-full bg-indigo-500" />
                   </div>
                 </motion.div>
               ))}
@@ -168,37 +166,37 @@ const Experience: React.FC = () => {
 
         {/* Education Highlight Card */}
         <motion.div
-           initial={{ opacity: 0, scale: 0.95 }}
-           whileInView={{ opacity: 1, scale: 1 }}
-           viewport={{ once: true }}
-           className="mt-24 p-8 md:p-12 glass-card rounded-[3rem] border border-white/5 flex flex-col md:flex-row items-center gap-10 overflow-hidden relative"
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          className="mt-24 p-8 md:p-12 glass-card rounded-[3rem] border border-white/5 flex flex-col md:flex-row items-center gap-10 overflow-hidden relative"
         >
-            <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/5 blur-[100px] -z-10" />
-            <div className="md:w-1/3 flex justify-center">
-                <div className="w-32 h-32 md:w-48 md:h-48 rounded-full bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center p-8">
-                    <BookOpen size={64} className="text-indigo-500" />
-                </div>
+          <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/5 blur-[100px] -z-10" />
+          <div className="md:w-1/3 flex justify-center">
+            <div className="w-32 h-32 md:w-48 md:h-48 rounded-full bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center p-8">
+              <BookOpen size={64} className="text-indigo-500" />
             </div>
-            <div className="md:w-2/3">
-                <h3 className="text-3xl font-bold mb-4">Academic Excellence</h3>
-                <p className="text-slate-400 text-lg mb-6 leading-relaxed">
-                    Committed to continuous learning and theoretical mastery. I apply academic principles of software engineering to real-world development challenges.
-                </p>
-                <div className="grid grid-cols-2 gap-4">
-                    <div className="flex items-center gap-3 text-slate-300">
-                        <div className="w-2 h-2 rounded-full bg-emerald-500" /> Software Architecture
-                    </div>
-                    <div className="flex items-center gap-3 text-slate-300">
-                        <div className="w-2 h-2 rounded-full bg-emerald-500" /> Database Optimization
-                    </div>
-                    <div className="flex items-center gap-3 text-slate-300">
-                        <div className="w-2 h-2 rounded-full bg-emerald-500" /> Unit Testing
-                    </div>
-                    <div className="flex items-center gap-3 text-slate-300">
-                        <div className="w-2 h-2 rounded-full bg-emerald-500" /> Agile Methodologies
-                    </div>
-                </div>
+          </div>
+          <div className="md:w-2/3">
+            <h3 className="text-3xl font-bold mb-4">Academic Excellence</h3>
+            <p className="text-slate-400 text-lg mb-6 leading-relaxed">
+              Committed to continuous learning and theoretical mastery. I apply academic principles of software engineering to real-world development challenges.
+            </p>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="flex items-center gap-3 text-slate-300">
+                <div className="w-2 h-2 rounded-full bg-emerald-500" /> Software Architecture
+              </div>
+              <div className="flex items-center gap-3 text-slate-300">
+                <div className="w-2 h-2 rounded-full bg-emerald-500" /> Database Optimization
+              </div>
+              <div className="flex items-center gap-3 text-slate-300">
+                <div className="w-2 h-2 rounded-full bg-emerald-500" /> Unit Testing
+              </div>
+              <div className="flex items-center gap-3 text-slate-300">
+                <div className="w-2 h-2 rounded-full bg-emerald-500" /> Agile Methodologies
+              </div>
             </div>
+          </div>
         </motion.div>
       </div>
     </section>

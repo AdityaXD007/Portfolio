@@ -83,18 +83,21 @@ const Navbar: React.FC = () => {
               </Link>
             </motion.div>
           ))}
-          <motion.a
+          <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            href="https://github.com/AdityaXD007"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-full text-sm font-medium transition-all shadow-lg shadow-indigo-500/20"
           >
-            Hire Me
-          </motion.a>
+            <Link
+              to="contact"
+              smooth={true}
+              offset={-70}
+              className="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-full text-sm font-medium transition-all shadow-lg shadow-indigo-500/20 cursor-pointer block"
+            >
+              Hire Me
+            </Link>
+          </motion.div>
         </div>
 
         {/* Mobile Toggle */}

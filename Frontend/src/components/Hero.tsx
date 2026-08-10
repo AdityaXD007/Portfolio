@@ -17,10 +17,13 @@ const TERMINAL_LINES = [
 const skillPills = [
   { name: "Django", highlighted: true },
   { name: "React", highlighted: true },
+  { name: "React Native", highlighted: true },
+  { name: "Flutter", highlighted: true },
   { name: "TypeScript", highlighted: true },
   { name: "PostgreSQL", highlighted: false },
   { name: "AWS", highlighted: false },
   { name: "REST APIs", highlighted: false },
+  { name: "FAST APIs", highlighted: false },
   { name: "Docker", highlighted: false },
 ];
 
@@ -151,11 +154,10 @@ const TerminalTyping: React.FC = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1 + i * 0.1 }}
-            className={`text-[10px] px-3 py-1 rounded-full border ${
-              skill.highlighted 
-                ? "border-[#7c3aed] text-[#a78bfa] bg-[#1a1040]" 
-                : "border-[#30363d] text-[#8b949e] bg-transparent"
-            }`}
+            className={`text-[10px] px-3 py-1 rounded-full border ${skill.highlighted
+              ? "border-[#7c3aed] text-[#a78bfa] bg-[#1a1040]"
+              : "border-[#30363d] text-[#8b949e] bg-transparent"
+              }`}
           >
             {skill.name}
           </motion.span>
@@ -192,7 +194,7 @@ const Hero: React.FC = () => {
     <section id="hero" className="min-h-screen flex items-center justify-center pt-20 px-6 bg-background relative overflow-hidden">
       {/* Background Decorative Elements */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_-20%,#312e8115,transparent)]" />
-      
+
       {/* Animated Blobs */}
       <div className="absolute top-1/4 -left-20 w-96 h-96 bg-indigo-600/10 rounded-full blur-[100px] animate-pulse" />
       <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-emerald-600/10 rounded-full blur-[100px] animate-pulse delay-1000" />
@@ -214,7 +216,7 @@ const Hero: React.FC = () => {
               <span className="text-[12px] text-[#8b949e]">Available for new opportunities</span>
             </div>
           </motion.div>
-          
+
           {/* Headline */}
           <motion.div variants={itemVariants} className="mb-6">
             <p className="text-[16px] font-medium mb-2">
@@ -226,12 +228,12 @@ const Hero: React.FC = () => {
               <HeadlineTyping />
             </h1>
           </motion.div>
-          
+
           {/* Paragraph */}
           <motion.p variants={itemVariants} className="text-[15px] text-[#8b949e] leading-[1.75] mb-8">
-            Full-stack developer specialized in <span className="text-[#c9d1d9] font-medium">Django & React</span>. 
-            I take products from <span className="text-[#c9d1d9] font-medium">zero to shipped</span> and handle everything from database schema to pixel-perfect UI. 
-            Currently open to <span className="text-[#c9d1d9] font-medium">remote roles & freelance projects</span>.
+            Full-stack developer specialized in <span className="text-[#c9d1d9] font-medium">Django, React, Next.js, Flutter & React Native.</span>.
+            I build products from <span className="text-[#c9d1d9] font-medium">zero to shipped</span> handling everything from backend APIs and database design to modern, responsive web and mobile interfaces.
+            Currently open to <span className="text-[#c9d1d9] font-medium">work remote or onsite roles, freelance projects</span>.
           </motion.p>
 
           {/* Stats Row */}
@@ -242,12 +244,12 @@ const Hero: React.FC = () => {
             </div>
             <div className="w-[1px] h-10 bg-[#21262d]" />
             <div className="flex flex-col">
-              <span className="text-[24px] font-bold text-[#e6edf3]">5+</span>
+              <span className="text-[24px] font-bold text-[#e6edf3]">7+</span>
               <span className="text-[10px] text-[#6e7681] tracking-[0.08em] uppercase">Projects Completed</span>
             </div>
             <div className="w-[1px] h-10 bg-[#21262d]" />
           </motion.div>
-          
+
           {/* CTA Buttons */}
           <motion.div variants={itemVariants} className="flex flex-wrap gap-4">
             <Link to="projects" smooth={true}>
@@ -255,8 +257,8 @@ const Hero: React.FC = () => {
                 View Projects <ArrowRight size={16} />
               </button>
             </Link>
-            <a 
-              href="/Aditya_Karki_CV.pdf" 
+            <a
+              href="/Aditya_Karki_CV.pdf"
               download="Aditya_Karki_CV.pdf"
               className="bg-transparent border border-[#30363d] text-[#c9d1d9] px-6 py-3 rounded-[8px] font-medium flex items-center gap-2 hover:bg-[#161b22] transition-colors"
             >

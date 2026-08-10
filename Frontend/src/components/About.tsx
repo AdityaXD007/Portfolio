@@ -30,7 +30,7 @@ const About: React.FC = () => {
     <section id="about" className="py-24 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-16 items-start">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -42,25 +42,25 @@ const About: React.FC = () => {
             </h2>
             <div className="space-y-6 text-slate-400 text-lg leading-relaxed">
               <p>
-                I am a Full Stack Developer with a deep-seated passion for technology and problem-solving. My journey in development started with curiosity and has evolved into a career focused on building real-world applications that solve complex problems.
+                I am a <span className="text-white font-medium">Full Stack Developer</span> a strong passion for technology, problem-solving, and building real-world applications. My journey in development started with curiosity and has grown into hands-on experience developing modern web and mobile applications.
               </p>
               <p>
-                Currently, I specialize in the <span className="text-white font-medium">Django + React</span> ecosystem. I enjoy bridging the gap between sophisticated backend logic and elegant frontend presentation. Whether it's architecting a database schema or polishing a CSS animation, I bring the same level of dedication to every layer of the stack.
+                I work across the <span className="text-white font-medium">Django, React, and Next.js</span> for web development, along with <span className="text-white font-medium">Flutter and React Native for mobile applications.</span>. I enjoy bridging the gap between reliable backend systems and clean, intuitive user interfaces. Whether it's designing database structures, building REST APIs, developing responsive interfaces, or creating mobile experiences, I bring the same attention to detail to every part of the application.
               </p>
               <p>
-                My goal is to build software that is not only functional but also intuitive and secure. I thrive in collaborative environments and am always looking to learn and grow with the latest industry standards.
+                My goal is to build software that is <span className="text-white font-medium">functional, scalable, secure, and enjoyable</span> to use. I enjoy turning ideas into practical solutions, working in collaborative environments, and continuously learning new technologies and development practices to improve the products I build.
               </p>
             </div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             className="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6 w-full"
           >
             {highlights.map((item, index) => (
-              <div 
+              <div
                 key={index}
                 className="glass-card p-8 rounded-2xl border border-white/5 hover:border-indigo-500/30 transition-all group"
               >
