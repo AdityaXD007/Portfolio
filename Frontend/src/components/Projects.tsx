@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Layers, MessageSquare, ShieldCheck, Video, GraduationCap, ArrowRight, Coins } from 'lucide-react';
-import { GithubIcon as Github } from './Icons';
+import { ExternalLink, MessageSquare, ShieldCheck, Video, GraduationCap, ArrowRight } from 'lucide-react';
 import { Gamepad2, Users, Spade, RefreshCw, Trophy, Dice5, Zap, Crown } from "lucide-react";
 
 const projects = [
