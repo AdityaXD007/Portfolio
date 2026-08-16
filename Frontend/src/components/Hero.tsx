@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { motion, type Variants } from 'framer-motion';
 import { ArrowRight, Download } from 'lucide-react';
 import { Link } from 'react-scroll';
-import { MagneticText, MagneticHeading } from './MagneticText';
+import { MagneticHeading } from './MagneticText';
 
 const TERMINAL_LINES = [
   { text: 'const buildApp = async () => {', color: 'text-slate-300' },
