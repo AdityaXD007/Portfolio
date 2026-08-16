@@ -257,7 +257,7 @@ const Hero: React.FC = () => {
           {/* Stats Row */}
           <motion.div variants={itemVariants} className="flex items-center gap-8 mb-10">
             <div className="flex flex-col">
-              <span className="text-[24px] font-bold text-[#e6edf3]">1+</span>
+              <span className="text-[24px] font-bold text-[#e6edf3]">2+</span>
               <span className="text-[10px] text-[#6e7681] tracking-[0.08em] uppercase">Years Building</span>
             </div>
             <div className="w-[1px] h-10 bg-[#21262d]" />
