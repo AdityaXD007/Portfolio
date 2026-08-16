@@ -4,6 +4,7 @@ import { Menu, X, Mail } from 'lucide-react';
 import { GithubIcon as Github, LinkedinIcon as Linkedin } from './Icons';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '../lib/utils';
+import { MagneticText } from './MagneticText';
 
 const navLinks = [
   { name: 'Home', to: 'hero' },
@@ -95,7 +96,9 @@ const Navbar: React.FC = () => {
               offset={-70}
               className="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-full text-sm font-medium transition-all shadow-lg shadow-indigo-500/20 cursor-pointer block"
             >
-              Hire Me
+              <MagneticText strength={0.4} radius={80}>
+                Hire Me
+              </MagneticText>
             </Link>
           </motion.div>
         </div>

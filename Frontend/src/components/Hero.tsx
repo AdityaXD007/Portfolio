@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { motion, type Variants } from 'framer-motion';
 import { ArrowRight, Download } from 'lucide-react';
 import { Link } from 'react-scroll';
+import { MagneticText, MagneticHeading } from './MagneticText';
 
 const TERMINAL_LINES = [
   { text: 'const buildApp = async () => {', color: 'text-slate-300' },
@@ -221,10 +222,27 @@ const Hero: React.FC = () => {
           <motion.div variants={itemVariants} className="mb-6">
             <p className="text-[16px] font-medium mb-2">
               <span className="text-[#8b949e]">Hi, I'm </span>
-              <span className="text-[#e6edf3]">Aditya Karki</span>
+              <MagneticHeading
+                as="span"
+                splitBy="letter"
+                strength={0.4}
+                radius={10}
+                className="text-[#e6edf3] font-semibold"
+                itemClassName="hover:text-indigo-400 transition-colors"
+              >
+                Aditya Karki
+              </MagneticHeading>
             </p>
             <h1 className="text-[42px] font-bold leading-tight text-[#e6edf3]">
-              I turn ideas into <br />
+              <MagneticHeading
+                as="span"
+                splitBy="letter"
+                strength={0.35}
+                radius={35}
+              >
+                I turn ideas into
+              </MagneticHeading>
+              <br />
               <HeadlineTyping />
             </h1>
           </motion.div>
