@@ -51,9 +51,11 @@ const HeadlineTyping: React.FC = () => {
     }
 
     if (subIndex === 0 && reverse) {
-      setReverse(false);
-      setIndex((prev) => (prev + 1) % phrases.length);
-      return;
+      const t = setTimeout(() => {
+        setReverse(false);
+        setIndex((prev) => (prev + 1) % phrases.length);
+      }, 0);
+      return () => clearTimeout(t);
     }
 
     const timeout = setTimeout(() => {

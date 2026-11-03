@@ -3,7 +3,24 @@ import { motion } from 'framer-motion';
 import { ExternalLink, MessageSquare, ShieldCheck, Video, GraduationCap, ArrowRight } from 'lucide-react';
 import { Gamepad2, Users, Spade, RefreshCw, Trophy, Dice5, Zap, Crown } from "lucide-react";
 
-const projects = [
+interface ProjectFeature {
+  icon: React.ReactNode;
+  text: string;
+}
+
+interface ProjectData {
+  title: string;
+  description: string;
+  longDescription: string;
+  image: string;
+  tech: string[];
+  links: { github?: string; live?: string };
+  features: ProjectFeature[];
+  accent: string;
+  badge?: string;
+}
+
+const projects: ProjectData[] = [
   {
     title: "SkillSwap",
     description: "A comprehensive peer-to-peer skill exchange platform. Built with a focus on real-time communication and secure transactions.",
@@ -129,10 +146,10 @@ const Projects: React.FC = () => {
 
               {/* Project Details */}
               <div className="lg:col-span-5 flex flex-col justify-center">
-                {(project as any).badge && (
+                {project.badge && (
                   <div className="flex items-center gap-2 mb-4 bg-indigo-500/10 text-indigo-400 px-3 py-1.5 rounded-lg border border-indigo-500/20 w-fit">
                     <GraduationCap size={14} />
-                    <span className="text-[10px] font-bold uppercase tracking-wider">{(project as any).badge}</span>
+                    <span className="text-[10px] font-bold uppercase tracking-wider">{project.badge}</span>
                   </div>
                 )}
                 <div className="flex items-center gap-3 mb-4">
