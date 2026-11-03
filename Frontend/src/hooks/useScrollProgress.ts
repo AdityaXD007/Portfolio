@@ -49,3 +49,4 @@ export function useScrollProgress(
 }
 
 export default useScrollProgress;
+

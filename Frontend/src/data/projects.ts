@@ -73,3 +73,4 @@ export const projects: Project[] = [
     image: '/assets/cheaterludo.png',
   },
 ];
+
