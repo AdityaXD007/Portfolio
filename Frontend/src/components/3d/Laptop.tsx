@@ -1,10 +1,13 @@
 import React, { useRef, useMemo, useState, useEffect } from 'react';
 import * as THREE from 'three';
 import { useGLTF } from '@react-three/drei';
+import { useFrame } from '@react-three/fiber';
 
 export interface LaptopProps {
   /** Lid angle in radians: 0 is fully closed, ~1.83 rad (~105 deg) is fully open */
-  lidAngle: number;
+  lidAngle?: number;
+  /** Optional mutable ref for 60fps frame-driven lid angle */
+  lidAngleRef?: React.MutableRefObject<number>;
   /** Optional custom GLTF model path in /public */
   modelUrl?: string;
   /** Children to render on the laptop screen (e.g. Drei Html transform) */
@@ -22,11 +25,19 @@ export interface LaptopProps {
 // -------------------------------------------------------------
 
 export const ProceduralLaptop: React.FC<LaptopProps> = ({
-  lidAngle,
+  lidAngle = 0,
+  lidAngleRef,
   children,
   screenRef,
 }) => {
   const hingeGroupRef = useRef<THREE.Group>(null);
+
+  useFrame(() => {
+    if (hingeGroupRef.current) {
+      const angle = lidAngleRef ? lidAngleRef.current : lidAngle;
+      hingeGroupRef.current.rotation.x = -angle;
+    }
+  });
 
   // Chassis materials
   const chassisMaterial = useMemo(
@@ -243,7 +254,8 @@ interface GLTFLaptopProps extends LaptopProps {
 
 const GLTFModelLaptop: React.FC<GLTFLaptopProps> = ({
   url,
-  lidAngle,
+  lidAngle = 0,
+  lidAngleRef,
   children,
   screenRef,
 }) => {
@@ -268,12 +280,13 @@ const GLTFModelLaptop: React.FC<GLTFLaptopProps> = ({
     });
   }, [clonedScene]);
 
-  // Apply lidAngle to detected lid node
-  useEffect(() => {
+  // Apply lidAngle to detected lid node smoothly
+  useFrame(() => {
     if (lidGroupRef.current) {
-      lidGroupRef.current.rotation.x = -lidAngle;
+      const angle = lidAngleRef ? lidAngleRef.current : lidAngle;
+      lidGroupRef.current.rotation.x = -angle;
     }
-  }, [lidAngle]);
+  });
 
   return (
     <primitive object={clonedScene}>
